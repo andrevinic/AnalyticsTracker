@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+struct EventModel{
+    var name: String
+    var parameters: Dictionary<String, String>
+    
+    init(name: String, parameters: Dictionary<String, String>) {
+        self.name = name
+        self.parameters = parameters
+    }
+}

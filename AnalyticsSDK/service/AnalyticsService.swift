@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import CloudKit
+
 protocol AnalyticsService{
-    func sendAnalyticsEvent(named name: String)
+    func sendAnalyticsEvent(named name: String, withParameters parameters: Dictionary<String, String>)
 }

@@ -6,8 +6,14 @@
 //  Copyright © 2019 André Nogueira. All rights reserved.
 //
 
-import UIKit
-
 class AnalyticsManager: NSObject {
+
+    private let engine: AnalyticsService
+    init(engine: AnalyticsService) {
+        self.engine = engine
+    }
+    func log(_ event: AnalyticsEvent) {
+        engine.sendAnalyticsEvent(named: event.name, withParameters: event.metadata)
+    }
 
 }

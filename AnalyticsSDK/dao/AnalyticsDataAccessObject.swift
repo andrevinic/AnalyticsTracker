@@ -10,4 +10,9 @@ import UIKit
 
 class AnalyticsDataAccessObject: NSObject {
 
+    static let shared = AnalyticsDataAccessObject()
+
+    func recordObject(eventModelList: [EventModel]){
+        //record object list
+    }
 }
